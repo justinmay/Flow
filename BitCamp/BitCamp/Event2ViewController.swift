@@ -9,7 +9,6 @@
 import UIKit
 
 class Event2ViewController: UIViewController {
-    @IBOutlet weak var threept: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var height: UILabel!
     @IBOutlet weak var wingspan: UILabel!
@@ -18,9 +17,19 @@ class Event2ViewController: UIViewController {
     @IBOutlet weak var labels: UILabel!
     @IBOutlet weak var pts: UILabel!
     
+    @objc func superDukeSwipe(_ sender: UISwipeGestureRecognizer) {
+        print("hi");
+        if sender.direction == UISwipeGestureRecognizerDirection.right{
+            self.performSegue(withIdentifier: "UMD2DUKE", sender: self)
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        var superSuperDupeSwipeLeft = UISwipeGestureRecognizer(target: self,action: #selector(EventsViewController.superDukeSwipe(_:)))
+        superSuperDupeSwipeLeft.direction = .left
+        self.view.addGestureRecognizer(superSuperDupeSwipeLeft)
         // Do any additional setup after loading the view.
     }
 
@@ -29,13 +38,16 @@ class Event2ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBar.isHidden=true;
+        
         self.labels.alpha=0;
         self.height.alpha=0;
         self.name.alpha=0;
         self.wingspan.alpha=0;
         self.pointGuard.alpha=0;
-        self.threept.alpha=0;
         self.pts.alpha=0;
         self.weight.alpha=0;
         self.labels.fadeIn()
@@ -43,8 +55,6 @@ class Event2ViewController: UIViewController {
         self.height.fadeIn()
         self.wingspan.fadeIn()
         self.pointGuard.fadeIn()
-        self.pointGuard.fadeIn()
-        self.threept.fadeIn()
         self.pts.fadeIn()
         self.weight.fadeIn()
     }

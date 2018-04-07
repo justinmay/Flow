@@ -11,7 +11,7 @@ import Foundation
 
 class EventsViewController: UIViewController {
 
-    @IBOutlet weak var pointGuard: UILabel!
+    @IBOutlet weak var pg: UILabel!
     @IBOutlet weak var labels: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var height: UILabel!
@@ -31,11 +31,14 @@ class EventsViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBar.isHidden=false;
+        
         self.labels.alpha=0;
         self.height.alpha=0;
         self.name.alpha=0;
         self.wingspan.alpha=0;
-        self.pointGuard.alpha=0;
+        self.pg.alpha=0;
         self.threept.alpha=0;
         self.pts.alpha=0;
         self.weight.alpha=0;
@@ -43,8 +46,7 @@ class EventsViewController: UIViewController {
         self.name.fadeIn()
         self.height.fadeIn()
         self.wingspan.fadeIn()
-        self.pointGuard.fadeIn()
-        self.pointGuard.fadeIn()
+        self.pg.fadeIn()
         self.threept.fadeIn()
         self.pts.fadeIn()
         self.weight.fadeIn()

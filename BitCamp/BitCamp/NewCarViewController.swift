@@ -10,6 +10,13 @@ import UIKit
 
 class NewCarViewController: UIViewController, UITextFieldDelegate, BeaconScannerDelegate{
 
+    var array: [Double] = []
+    var distance: Double!
+    var domainMax: Double!
+    var domainMin: Double!
+    var txPower = -58.0
+    var sum = 0.0
+    
     @IBOutlet weak var newCarTextField: UITextField!
     var beaconScanner: BeaconScanner!
 
@@ -60,7 +67,20 @@ class NewCarViewController: UIViewController, UITextFieldDelegate, BeaconScanner
         NSLog("UPDATE: %@", beaconInfo.description)
     }
     func didObserveURLBeacon(beaconScanner: BeaconScanner, URL: NSURL, RSSI: Int) {
-        print("URL SEEN: \(URL), RSSI: \(RSSI), Distance: \(getDistance(rssi: RSSI, txPower: -72))")
+        let distance = getDistance(rssi: RSSI, txPower: self.txPower)
+        print("real distance is \(distance)")
+        if(distance >= 3.0){
+            return;
+        }
+        if(array.count >= 5){
+            sum -=  array[array.count - 5]
+        }
+        array.append(distance)
+        sum += distance
+        if(array.count>=6){
+             print("URL SEEN: \(URL), RSSI: \(RSSI), Distance: \(sum / 5)")
+        }
+        //print(array[..<5])
     }
 
 

@@ -75,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1415.2" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1414" y="228"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hux-Qb-syD">
@@ -125,7 +125,6 @@
         <!--New Car View Controller-->
         <scene sceneID="thg-fU-mEL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8bV-w4-CVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="1R7-8g-dH8" customClass="NewCarViewController" customModule="BitCamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v2f-PE-JbM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -170,8 +169,9 @@
                         <outlet property="newCarTextField" destination="qeQ-oT-cQa" id="1BM-cc-iVQ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8bV-w4-CVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2300" y="-91.304347826086968"/>
+            <point key="canvasLocation" x="2598" y="-91"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="n4C-rw-nUC">
@@ -206,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7p-ou-RKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4036" y="-91"/>
+            <point key="canvasLocation" x="4353" y="-91"/>
         </scene>
         <!--Main Menu View Controller-->
         <scene sceneID="C02-Wg-dwi">
@@ -255,6 +255,9 @@
                                 <state key="normal" title="Find food">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="NdH-1Z-2LG" kind="show" id="zhs-Is-VWB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnM-v6-hXB">
                                 <rect key="frame" x="102" y="284" width="164" height="51"/>
@@ -317,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DpC-6d-0yR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3239.1999999999998" y="620.23988005997012"/>
+            <point key="canvasLocation" x="3542" y="619"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="59q-f4-27L">
@@ -338,7 +341,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wkj-hv-XPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4036" y="620"/>
+            <point key="canvasLocation" x="4353" y="620"/>
         </scene>
         <!--Events View Controller-->
         <scene sceneID="sP0-ey-R3k">
@@ -406,10 +409,10 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Point Guard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEI-Sg-4lV">
-                                <rect key="frame" x="0.0" y="492" width="143" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Point Guard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLO-e6-rsa">
+                                <rect key="frame" x="-18" y="495" width="148" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="27"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -421,7 +424,7 @@
                         <outlet property="height" destination="aox-li-CbG" id="qPw-al-1u1"/>
                         <outlet property="labels" destination="NMm-Lt-Rdg" id="y99-et-16n"/>
                         <outlet property="name" destination="lzh-Eq-4wj" id="f9M-zV-U8c"/>
-                        <outlet property="pointGuard" destination="rEI-Sg-4lV" id="E43-UM-uyF"/>
+                        <outlet property="pg" destination="bLO-e6-rsa" id="cFq-2z-uRd"/>
                         <outlet property="pts" destination="tqg-M4-E9J" id="hkz-cn-f1u"/>
                         <outlet property="threept" destination="3TW-aS-4y0" id="4nY-IF-iLz"/>
                         <outlet property="weight" destination="xpF-Kd-zRx" id="88e-oh-n76"/>
@@ -431,7 +434,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kd2-2m-S0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3188" y="2081"/>
+            <point key="canvasLocation" x="1415" y="1548"/>
         </scene>
         <!--Event2 View Controller-->
         <scene sceneID="UuV-mJ-hhC">
@@ -449,13 +452,6 @@
                                 <rect key="frame" x="0.0" y="194" width="373" height="795"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3 POINT SHOT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7h-HL-ciN">
-                                <rect key="frame" x="109" y="205" width="248" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="35"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height 6'0&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96r-Rf-fTR">
                                 <rect key="frame" x="196" y="328" width="161" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -515,14 +511,40 @@
                         <outlet property="name" destination="xTm-c6-GvZ" id="cJ0-i3-cE8"/>
                         <outlet property="pointGuard" destination="N4b-OE-l34" id="RSo-7u-DkX"/>
                         <outlet property="pts" destination="uoa-9f-ebJ" id="BNJ-xA-O3U"/>
-                        <outlet property="threept" destination="G7h-HL-ciN" id="jzr-Yg-50Z"/>
                         <outlet property="weight" destination="s8z-dx-8oV" id="BlI-Z8-qfP"/>
                         <outlet property="wingspan" destination="SzB-oI-hRz" id="fm7-mn-9t7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iBE-qK-gXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="9yN-Z9-Umm">
+                    <connections>
+                        <segue destination="LGf-Kf-unn" kind="show" identifier="UMD2DUKE" id="gEP-6d-SER"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3887.1999999999998" y="2078.4107946026988"/>
+            <point key="canvasLocation" x="2598" y="1548"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="edx-7B-3zh">
+            <objects>
+                <viewController id="NdH-1Z-2LG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TLG-Hl-i1O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="fuE-CM-3wj">
+                                <rect key="frame" x="0.0" y="203" width="376" height="217"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.66562587019999997" green="0.66614204649999997" blue="0.66570580010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85192281010000004" green="0.85257238150000003" blue="0.85202342269999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Vu2-zI-lxj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJu-wz-93J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3543" y="1548"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="El5-XB-aUd">
@@ -544,7 +566,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQ3-SO-JQ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4036" y="1385"/>
+            <point key="canvasLocation" x="4353" y="1548"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yq2-4K-ncM">
@@ -562,7 +584,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gok-CM-Frx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+            <point key="canvasLocation" x="478" y="227"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L1Y-sr-cIx">
@@ -580,7 +602,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jou-HI-73h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2300" y="620.23988005997012"/>
+            <point key="canvasLocation" x="2598" y="620"/>
         </scene>
     </scenes>
     <resources>
@@ -590,6 +612,7 @@
         <image name="betterbathrooms" width="766" height="865"/>
         <image name="duke" width="382" height="132"/>
         <image name="flowIcon" width="280" height="280"/>
+        <image name="food" width="766" height="865"/>
         <image name="help" width="650" height="359"/>
         <image name="map" width="454" height="340"/>
         <image name="maryland" width="450" height="225"/>
@@ -598,4 +621,7 @@
         <image name="stadium-crop" width="766" height="865"/>
         <image name="umd" width="515" height="518"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9N0-2o-mp4"/>
+    </inferredMetricsTieBreakers>
 </document>
