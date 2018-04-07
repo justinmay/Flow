@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1A436E754FAC84B83A99ABD7 /* Pods_BitCamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70453AEADBD2A8651C43B5A /* Pods_BitCamp.framework */; };
+		98AFFD3E20794F53009041AE /* Eddystone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AFFD3D20794F53009041AE /* Eddystone.swift */; };
+		98AFFD4120794F8A009041AE /* BeaconScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AFFD4020794F8A009041AE /* BeaconScanner.swift */; };
+		98AFFD4320794FA4009041AE /* DispatchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AFFD4220794FA4009041AE /* DispatchTimer.swift */; };
 		A802AB53207863D5003A8987 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A802AB52207863D5003A8987 /* AppDelegate.swift */; };
 		A802AB55207863D5003A8987 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A802AB54207863D5003A8987 /* ViewController.swift */; };
 		A802AB58207863D5003A8987 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A802AB56207863D5003A8987 /* Main.storyboard */; };
@@ -21,6 +24,9 @@
 /* Begin PBXFileReference section */
 		68B3F9B5A49F666CAB81EBFB /* Pods-BitCamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitCamp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitCamp/Pods-BitCamp.debug.xcconfig"; sourceTree = "<group>"; };
 		7D043348C65A4355613EB8A3 /* Pods-BitCamp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitCamp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitCamp/Pods-BitCamp.release.xcconfig"; sourceTree = "<group>"; };
+		98AFFD3D20794F53009041AE /* Eddystone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eddystone.swift; sourceTree = "<group>"; };
+		98AFFD4020794F8A009041AE /* BeaconScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconScanner.swift; sourceTree = "<group>"; };
+		98AFFD4220794FA4009041AE /* DispatchTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchTimer.swift; sourceTree = "<group>"; };
 		A802AB4F207863D5003A8987 /* BitCamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitCamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A802AB52207863D5003A8987 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A802AB54207863D5003A8987 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +61,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		98AFFD3F20794F60009041AE /* Beacon Detection */ = {
+			isa = PBXGroup;
+			children = (
+				98AFFD3D20794F53009041AE /* Eddystone.swift */,
+				98AFFD4020794F8A009041AE /* BeaconScanner.swift */,
+				98AFFD4220794FA4009041AE /* DispatchTimer.swift */,
+			);
+			path = "Beacon Detection";
+			sourceTree = "<group>";
+		};
 		A802AB46207863D5003A8987 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +92,7 @@
 		A802AB51207863D5003A8987 /* BitCamp */ = {
 			isa = PBXGroup;
 			children = (
+				98AFFD3F20794F60009041AE /* Beacon Detection */,
 				CBD4D96920792D8200AC753E /* EventsViewController.swift */,
 				CBD4D9532079179F00AC753E /* MainMenuViewController.swift */,
 				CBD4D94F20790FDC00AC753E /* NewCarViewController.swift */,
@@ -219,10 +236,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD4D9542079179F00AC753E /* MainMenuViewController.swift in Sources */,
+				98AFFD4120794F8A009041AE /* BeaconScanner.swift in Sources */,
 				CBD4D95020790FDC00AC753E /* NewCarViewController.swift in Sources */,
 				A802AB55207863D5003A8987 /* ViewController.swift in Sources */,
+				98AFFD3E20794F53009041AE /* Eddystone.swift in Sources */,
 				A802AB53207863D5003A8987 /* AppDelegate.swift in Sources */,
 				CBD4D96A20792D8200AC753E /* EventsViewController.swift in Sources */,
+				98AFFD4320794FA4009041AE /* DispatchTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K9JJNGZDJF;
 				INFOPLIST_FILE = BitCamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vineeth.BitCamp;
@@ -376,6 +397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K9JJNGZDJF;
 				INFOPLIST_FILE = BitCamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vineeth.BitCamp;
