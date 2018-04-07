@@ -406,10 +406,10 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Point Guard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhZ-ZV-q8G">
-                                <rect key="frame" x="-18" y="495" width="165" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Point Guard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEI-Sg-4lV">
+                                <rect key="frame" x="0.0" y="492" width="143" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="26"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -421,7 +421,7 @@
                         <outlet property="height" destination="aox-li-CbG" id="qPw-al-1u1"/>
                         <outlet property="labels" destination="NMm-Lt-Rdg" id="y99-et-16n"/>
                         <outlet property="name" destination="lzh-Eq-4wj" id="f9M-zV-U8c"/>
-                        <outlet property="pointGuard" destination="BhZ-ZV-q8G" id="UdK-iC-GLR"/>
+                        <outlet property="pointGuard" destination="rEI-Sg-4lV" id="E43-UM-uyF"/>
                         <outlet property="pts" destination="tqg-M4-E9J" id="hkz-cn-f1u"/>
                         <outlet property="threept" destination="3TW-aS-4y0" id="4nY-IF-iLz"/>
                         <outlet property="weight" destination="xpF-Kd-zRx" id="88e-oh-n76"/>

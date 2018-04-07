@@ -11,11 +11,11 @@ import Foundation
 
 class EventsViewController: UIViewController {
 
+    @IBOutlet weak var pointGuard: UILabel!
     @IBOutlet weak var labels: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var height: UILabel!
     @IBOutlet weak var wingspan: UILabel!
-    @IBOutlet weak var pointGuard: UILabel!
     @IBOutlet weak var threept: UILabel!
     @IBOutlet weak var pts: UILabel!
     @IBOutlet weak var weight: UILabel!
