@@ -16,6 +16,7 @@
 		CBD4D95020790FDC00AC753E /* NewCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD4D94F20790FDC00AC753E /* NewCarViewController.swift */; };
 		CBD4D9542079179F00AC753E /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD4D9532079179F00AC753E /* MainMenuViewController.swift */; };
 		CBD4D96A20792D8200AC753E /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD4D96920792D8200AC753E /* EventsViewController.swift */; };
+		CBD4D976207952AE00AC753E /* Event2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD4D975207952AE00AC753E /* Event2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		CBD4D94F20790FDC00AC753E /* NewCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCarViewController.swift; sourceTree = "<group>"; };
 		CBD4D9532079179F00AC753E /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		CBD4D96920792D8200AC753E /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		CBD4D975207952AE00AC753E /* Event2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event2ViewController.swift; sourceTree = "<group>"; };
 		D70453AEADBD2A8651C43B5A /* Pods_BitCamp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitCamp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				CBD4D96920792D8200AC753E /* EventsViewController.swift */,
+				CBD4D975207952AE00AC753E /* Event2ViewController.swift */,
 				CBD4D9532079179F00AC753E /* MainMenuViewController.swift */,
 				CBD4D94F20790FDC00AC753E /* NewCarViewController.swift */,
 				A802AB52207863D5003A8987 /* AppDelegate.swift */,
@@ -222,6 +225,7 @@
 				CBD4D95020790FDC00AC753E /* NewCarViewController.swift in Sources */,
 				A802AB55207863D5003A8987 /* ViewController.swift in Sources */,
 				A802AB53207863D5003A8987 /* AppDelegate.swift in Sources */,
+				CBD4D976207952AE00AC753E /* Event2ViewController.swift in Sources */,
 				CBD4D96A20792D8200AC753E /* EventsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
