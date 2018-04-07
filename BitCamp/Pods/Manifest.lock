@@ -1,0 +1,38 @@
+PODS:
+  - ExtendedJson (2.0.4):
+    - StitchLogger (~> 2.0.0)
+  - MongoDBService (3.0.2):
+    - ExtendedJson (~> 2.0.2)
+    - PromiseKit/CorePromise (~> 6.1.0)
+    - StitchCore (~> 3.0.2)
+    - StitchLogger (~> 2.0.0)
+  - PromiseKit/CorePromise (6.1.2)
+  - StitchCore (3.0.2):
+    - ExtendedJson (~> 2.0.2)
+    - PromiseKit/CorePromise (~> 6.1.0)
+    - StitchLogger (~> 2.0.0)
+  - StitchLogger (2.0.0)
+
+DEPENDENCIES:
+  - ExtendedJson (~> 2.0.4)
+  - MongoDBService (~> 3.0.2)
+  - StitchCore (~> 3.0.2)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - ExtendedJson
+    - MongoDBService
+    - PromiseKit
+    - StitchCore
+    - StitchLogger
+
+SPEC CHECKSUMS:
+  ExtendedJson: 543e63169b67b6cc10dc8c447573087abbee47e1
+  MongoDBService: a8a36dc6e9589e64bf16299cd74be3d5dda56c5f
+  PromiseKit: 4a3255c16f236bd8a6a6b070568cd27259c97381
+  StitchCore: 77a9a88483e6076a51b38d41a6084dfe6a4ba888
+  StitchLogger: d9c8ba71d0b0170ba2ea39871ff92fed8a5af5fb
+
+PODFILE CHECKSUM: cd6aa736eb6d3df26ac02e074b40c189697173f8
+
+COCOAPODS: 1.5.0
