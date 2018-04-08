@@ -10,6 +10,15 @@ import UIKit
 
 class NewCarViewController: UIViewController, UITextFieldDelegate, BeaconScannerDelegate{
 
+    @IBOutlet weak var parkedButton: UIButton!
+    @IBAction func parkedButton(_ sender: UIButton) {
+        self.parkedButton.backgroundColor = UIColor(red:0.94, green:0.28, blue:0.44, alpha:1.0)
+        self.parkedButton.setTitle("Leave", for: .normal)
+    }
+    @IBAction func newCarButton(_ sender: Any) {
+        self.parkedButton.backgroundColor = UIColor(red:0.02, green:0.84, blue:0.63, alpha:1.0)
+        self.parkedButton.setTitle("Parked", for: .normal)
+    }
     var array: [Double] = []
     var distance: Double!
     var domainMax: Double!
