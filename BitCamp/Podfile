@@ -9,7 +9,8 @@ target 'BitCamp' do
     pod 'MongoDBService', '~> 3.0.2'
     # optional: for using mongodb's ExtendedJson
     pod 'ExtendedJson', '~> 2.0.4'
-
+	pod 'Alamofire'
+	pod 'AlamofireObjectMapper'
   # Pods for BitCamp
 
 end

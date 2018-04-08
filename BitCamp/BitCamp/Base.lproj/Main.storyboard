@@ -71,7 +71,7 @@
                         <outlet property="usernameTextField" destination="nJx-29-sM9" id="NUC-DP-f37"/>
                         <segue destination="1XG-ia-TNF" kind="show" identifier="mainMenuSegue" id="gC3-Au-XyQ"/>
                         <segue destination="1R7-8g-dH8" kind="show" identifier="segue" id="jIX-bR-5wk"/>
-                        <segue destination="zIh-zV-te3" kind="show" identifier="welcomeSegue" id="QDq-1O-BRA"/>
+                        <segue destination="zIh-zV-te3" kind="modal" identifier="welcomeSegue" id="QDq-1O-BRA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -123,10 +123,10 @@
             </objects>
             <point key="canvasLocation" x="1321" y="-861"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="G54-SU-pJG">
             <objects>
-                <viewController id="zIh-zV-te3" sceneMemberID="viewController">
+                <viewController id="zIh-zV-te3" customClass="WelcomeViewController" customModule="BitCamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W4k-pB-5fJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,10 +142,70 @@
                         <color key="backgroundColor" red="1" green="0.81960784313725488" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="nu0-Vh-yTh"/>
                     </view>
+                    <connections>
+                        <outlet property="welcomeText" destination="Zf0-sS-M36" id="Z3S-an-EMA"/>
+                        <segue destination="Eb0-SW-U78" kind="presentation" identifier="welcome2segue" id="9VP-2t-ZhQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4y5-de-Tpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2604" y="-841"/>
+        </scene>
+        <!--welcomesegue3-->
+        <scene sceneID="yrJ-fT-dWa">
+            <objects>
+                <viewController title="welcomesegue3" id="Eb0-SW-U78" customClass="Welcome2ViewController" customModule="BitCamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fr8-zR-FJk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's Park! Follow the Screens." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXQ-Lc-Ghi">
+                                <rect key="frame" x="0.0" y="237" width="375" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="38"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.81960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="bmt-sJ-7qZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="welcomeText" destination="VXQ-Lc-Ghi" id="X8l-Bt-RkO"/>
+                        <segue destination="yGw-86-bSf" kind="presentation" identifier="welcome3segue" id="BGv-AR-2yg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MK4-1m-HaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3453.5999999999999" y="-842.42878560719646"/>
+        </scene>
+        <!--Welcome3 View Controller-->
+        <scene sceneID="c2F-c4-5fz">
+            <objects>
+                <viewController id="yGw-86-bSf" customClass="Welcome3ViewController" customModule="BitCamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="duQ-cz-Ml1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Once you're done hit park! Enjoy!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cp6-Ov-o1n">
+                                <rect key="frame" x="0.0" y="208" width="375" height="251"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.81960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Qir-cl-i2T"/>
+                    </view>
+                    <connections>
+                        <outlet property="welcomeText" destination="Cp6-Ov-o1n" id="qBn-Co-2JY"/>
+                        <segue destination="1R7-8g-dH8" kind="modal" identifier="welcomebacksegue" id="MQa-E1-gd9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDv-8x-9f6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4197.6000000000004" y="-843.32833583208401"/>
         </scene>
         <!--New Car View Controller-->
         <scene sceneID="thg-fU-mEL">
@@ -656,5 +716,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9N0-2o-mp4"/>
+        <segue reference="MQa-E1-gd9"/>
     </inferredMetricsTieBreakers>
 </document>

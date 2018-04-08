@@ -20,6 +20,10 @@
 		CBD4D9542079179F00AC753E /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD4D9532079179F00AC753E /* MainMenuViewController.swift */; };
 		CBD4D96A20792D8200AC753E /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD4D96920792D8200AC753E /* EventsViewController.swift */; };
 		CBD4D976207952AE00AC753E /* Event2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD4D975207952AE00AC753E /* Event2ViewController.swift */; };
+		CBF7824F2079BF9F00539A4E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF7824E2079BF9F00539A4E /* WelcomeViewController.swift */; };
+		CBF782512079C47200539A4E /* Welcome2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF782502079C47200539A4E /* Welcome2ViewController.swift */; };
+		CBF782532079C5F200539A4E /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF782522079C5F200539A4E /* Networking.swift */; };
+		CBF782552079C7C800539A4E /* Welcome3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF782542079C7C800539A4E /* Welcome3ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 		CBD4D9532079179F00AC753E /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		CBD4D96920792D8200AC753E /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		CBD4D975207952AE00AC753E /* Event2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event2ViewController.swift; sourceTree = "<group>"; };
+		CBF7824E2079BF9F00539A4E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		CBF782502079C47200539A4E /* Welcome2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome2ViewController.swift; sourceTree = "<group>"; };
+		CBF782522079C5F200539A4E /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		CBF782542079C7C800539A4E /* Welcome3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome3ViewController.swift; sourceTree = "<group>"; };
 		D70453AEADBD2A8651C43B5A /* Pods_BitCamp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitCamp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -105,6 +113,10 @@
 				A802AB56207863D5003A8987 /* Main.storyboard */,
 				A802AB5B207863D5003A8987 /* LaunchScreen.storyboard */,
 				A802AB5E207863D5003A8987 /* Info.plist */,
+				CBF7824E2079BF9F00539A4E /* WelcomeViewController.swift */,
+				CBF782502079C47200539A4E /* Welcome2ViewController.swift */,
+				CBF782522079C5F200539A4E /* Networking.swift */,
+				CBF782542079C7C800539A4E /* Welcome3ViewController.swift */,
 			);
 			path = BitCamp;
 			sourceTree = "<group>";
@@ -212,16 +224,22 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BitCamp/Pods-BitCamp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ExtendedJson/ExtendedJson.framework",
 				"${BUILT_PRODUCTS_DIR}/MongoDBService/MongoDBService.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/StitchCore/StitchCore.framework",
 				"${BUILT_PRODUCTS_DIR}/StitchLogger/StitchLogger.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ExtendedJson.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MongoDBService.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StitchCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StitchLogger.framework",
@@ -239,11 +257,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD4D9542079179F00AC753E /* MainMenuViewController.swift in Sources */,
+				CBF7824F2079BF9F00539A4E /* WelcomeViewController.swift in Sources */,
 				98AFFD4120794F8A009041AE /* BeaconScanner.swift in Sources */,
+				CBF782532079C5F200539A4E /* Networking.swift in Sources */,
 				CBD4D95020790FDC00AC753E /* NewCarViewController.swift in Sources */,
 				A802AB55207863D5003A8987 /* ViewController.swift in Sources */,
 				98AFFD3E20794F53009041AE /* Eddystone.swift in Sources */,
+				CBF782512079C47200539A4E /* Welcome2ViewController.swift in Sources */,
 				A802AB53207863D5003A8987 /* AppDelegate.swift in Sources */,
+				CBF782552079C7C800539A4E /* Welcome3ViewController.swift in Sources */,
 				CBD4D976207952AE00AC753E /* Event2ViewController.swift in Sources */,
 				CBD4D96A20792D8200AC753E /* EventsViewController.swift in Sources */,
 				98AFFD4320794FA4009041AE /* DispatchTimer.swift in Sources */,
