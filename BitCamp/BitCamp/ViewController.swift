@@ -30,9 +30,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
             self.performSegue(withIdentifier: "welcomeSegue", sender: self)
         }
         
+        /*
         Networking.requestParkingSpot(carID: "7", beaconID: "anand", completionHandler: {error in
             print("hi")
         })
+ */
     }
     
     

@@ -9,7 +9,7 @@
 import UIKit
 
 class NewCarViewController: UIViewController, UITextFieldDelegate, BeaconScannerDelegate{
-
+    
     @IBOutlet weak var parkedButton: UIButton!
     @IBAction func parkedButton(_ sender: UIButton) {
         self.parkedButton.backgroundColor = UIColor(red:0.94, green:0.28, blue:0.44, alpha:1.0)
@@ -17,11 +17,17 @@ class NewCarViewController: UIViewController, UITextFieldDelegate, BeaconScanner
         self.beaconScanner.stopScanning()
     }
     @IBAction func newCarButton(_ sender: Any) {
+        print("NEW CAR BUTTON TAPPED")
         self.parkedButton.backgroundColor = UIColor(red:0.02, green:0.84, blue:0.63, alpha:1.0)
         self.parkedButton.setTitle("Parked", for: .normal)
+        newCarId = self.newCarTextField.text!
+        print("NEW CAR ID : \(newCarId)")
+        
         self.beaconScanner!.startScanning()
-
+        
     }
+    
+    var newCarId : String!
     var array: [Double] = []
     var dick_tionary: [String:[Double]] = [:]
     var sumOfDicks: [String:Double] = [:]
@@ -32,10 +38,35 @@ class NewCarViewController: UIViewController, UITextFieldDelegate, BeaconScanner
     var sum = 0.0
     
     var beaconsSearched : [String] = []
+    var parkingLotString : String!
     
     @IBOutlet weak var newCarTextField: UITextField!
     var beaconScanner: BeaconScanner!
-
+    
+    @IBOutlet weak var parkingLotLabel: UILabel!
+    @IBOutlet weak var beaconNameLabel: UILabel!
+    
+    var beaconHardDict : [String : String] = [
+        "http://www.shashank.com" : "Beacon0",
+        "http://www.anandjustin.com" : "Beacon1",
+        "http://www.vineeth.com" : "Beacon2",
+        ]
+    
+    var parkingLotHardDict : [String : String] = [
+        "10" : "E1",
+        "9" : "F1",
+        "8" : "E2",
+        "7" : "F2",
+        "6" : "C1",
+        "5" : "D1",
+        "4" : "C2",
+        "3" : "D2",
+        "2" : "A1",
+        "1" : "B2"
+    ]
+    
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.navigationBar.isHidden=false;
@@ -49,10 +80,10 @@ class NewCarViewController: UIViewController, UITextFieldDelegate, BeaconScanner
         
         self.beaconScanner = BeaconScanner()
         self.beaconScanner!.delegate = self
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
@@ -101,16 +132,53 @@ class NewCarViewController: UIViewController, UITextFieldDelegate, BeaconScanner
         
         
         if distance < 0.05 {
-           
-            if (beaconsSearched.contains(beaconString)){
-                print("already there")
-            } else {
-                Networking.requestParkingSpot(carID: "7", beaconID: beaconString, completionHandler: {error in
-                    print("hi")
-                })
-                beaconsSearched.append(beaconString)
-            }
             
+            
+            if (beaconsSearched.contains(beaconString)){
+                //print("already there")
+            } else {
+                
+                print(beaconString)
+                let beaconActualString = beaconHardDict[beaconString]
+                
+                //dictionary for beacon
+                
+                self.beaconNameLabel.text = beaconActualString! + " passed"
+                self.beaconsSearched.append(beaconString)
+                //beaconScanner.stopScanning()
+                
+                if(beaconString == "http://www.shashank.com"){
+                    
+                    Networking.requestParkingSpot(carID: newCarId, beaconID: beaconString, completionHandler: { response, error in
+                        
+                        print("reached")
+                        if (error != nil){
+                            print(error ?? "error")
+                            //wont happen
+                            //dictionary
+                            
+                        } else {
+                            print("GO TO PARKING LOT \(response!)")
+                            //switch case here
+                            self.parkingLotString = response!
+                            self.parkingLotLabel.text = response!
+                            
+                        }
+                    })
+                } else if (beaconString == "http://www.anandjustin.com"){
+                    //PASSES SECOND BEACON (BEACON 1), SENDS POST TO SERVER AND CHANGES BIG SCREEN
+                    if parkingLotString != nil {
+                        
+                        Networking.passSecondBeacon(parkingSpot: self.parkingLotString, completionHandler: { error in
+                            if (error != nil){
+                                print(error ?? "error")
+                            } else {
+                                print("Successfully sent")
+                            }
+                        })
+                    }
+                }
+            }
         }
         print("real distance is \(distance)")
         if(dick_tionary[beaconString]!.count >= 5){
@@ -118,21 +186,24 @@ class NewCarViewController: UIViewController, UITextFieldDelegate, BeaconScanner
         }
         dick_tionary[beaconString]!.append(distance)
         sumOfDicks[beaconString]! += distance
+        print(sumOfDicks[beaconString]!)
+
         if(dick_tionary[beaconString]!.count>=6){
-             print("URL SEEN: \(URL), RSSI: \(RSSI), Distance: \(sum / 5)")
+            print("URL SEEN: \(URL), RSSI: \(RSSI), Distance: \(sumOfDicks[beaconString]! / 5)")
         }
         //print(array[..<5])
     }
-
-
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
+

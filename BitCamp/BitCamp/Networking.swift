@@ -11,10 +11,10 @@ import Alamofire
 
 class Networking {
     var url: String? {
-        return "http://eab6a836.ngrok.io"
+        return "http://d58716a5.ngrok.io"
     }
     
-    class func requestParkingSpot(carID: String, beaconID: String, completionHandler: @escaping (NSError?) -> ()){
+    class func requestParkingSpot(carID: String, beaconID: String, completionHandler: @escaping (String?, NSError?) -> ()){
         
         let parameters : Parameters = [
             "carId" : carID,
@@ -22,6 +22,27 @@ class Networking {
         ]
         
         Alamofire.request(Networking().url! + "/request", method: .post, parameters: parameters, encoding: URLEncoding.default).responseString {
+            (response) in
+            
+            print(response)
+            switch response.result {
+            case .success(let value):
+                completionHandler(value, nil)
+            case .failure(let error):
+                completionHandler(nil, error as NSError)
+            }
+        }
+        
+    }
+    
+    class func passSecondBeacon(parkingSpot: String, completionHandler: @escaping (NSError?) -> ()){
+        
+        let parameters : Parameters = [
+            //"carId" : carID,
+            "parkingSpot" : parkingSpot
+        ]
+        
+        Alamofire.request(Networking().url! + "/beaconPast", method: .post, parameters: parameters, encoding: URLEncoding.default).responseString {
             (response) in
             
             print(response)
@@ -35,4 +56,5 @@ class Networking {
         }
         
     }
+
 }
