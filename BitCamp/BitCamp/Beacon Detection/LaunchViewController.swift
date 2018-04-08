@@ -1,18 +1,26 @@
 //
-//  MainMenuViewController.swift
+//  LaunchViewController.swift
 //  BitCamp
 //
-//  Created by Justin May on 4/7/18.
+//  Created by Justin May on 4/8/18.
 //  Copyright © 2018 Vineeth. All rights reserved.
 //
 
 import UIKit
 
-class MainMenuViewController: UIViewController {
+class LaunchViewController: UIViewController {
 
+    @IBOutlet weak var circle: UIImageView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 10.0, animations: {
+            self.circle.transform = CGAffineTransform(rotationAngle: (180.0 * .pi) / 180.0)
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
+
         // Do any additional setup after loading the view.
     }
 
@@ -20,11 +28,8 @@ class MainMenuViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.navigationController?.navigationBar.isHidden=true;
-    }
     /*
     // MARK: - Navigation
 

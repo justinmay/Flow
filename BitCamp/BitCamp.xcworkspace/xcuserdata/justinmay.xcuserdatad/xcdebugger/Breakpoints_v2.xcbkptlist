@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BitCamp/NewCarViewController.swift"
-            timestampString = "544851391.503606"
+            timestampString = "544860089.158904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "didObserveURLBeacon(beaconScanner:URL:RSSI:)"
             landmarkType = "7">
          </BreakpointContent>

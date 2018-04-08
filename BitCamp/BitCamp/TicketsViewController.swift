@@ -1,30 +1,32 @@
 //
-//  MainMenuViewController.swift
+//  TicketsViewController.swift
 //  BitCamp
 //
-//  Created by Justin May on 4/7/18.
+//  Created by Justin May on 4/8/18.
 //  Copyright © 2018 Vineeth. All rights reserved.
 //
 
 import UIKit
 
-class MainMenuViewController: UIViewController {
+class TicketsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
-        // Do any additional setup after loading the view.
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.navigationController?.navigationBar.isHidden=true;
+        self.navigationController?.navigationBar.isHidden=false;
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+
     /*
     // MARK: - Navigation
 

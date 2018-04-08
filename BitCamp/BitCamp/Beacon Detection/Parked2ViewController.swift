@@ -1,18 +1,28 @@
 //
-//  MainMenuViewController.swift
+//  Parked2ViewController.swift
 //  BitCamp
 //
-//  Created by Justin May on 4/7/18.
+//  Created by Justin May on 4/8/18.
 //  Copyright © 2018 Vineeth. All rights reserved.
 //
 
 import UIKit
 
-class MainMenuViewController: UIViewController {
+class Parked2ViewController: UIViewController {
 
+    @IBOutlet weak var parkedText: UILabel!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.parkedText.alpha = 0;
+        self.parkedText.faded(completion: {(finished:Bool) -> Void in self.parkedText.fadeOut()})
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+            self.performSegue(withIdentifier: "parked2segue", sender: self)
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
+
         // Do any additional setup after loading the view.
     }
 
@@ -20,11 +30,8 @@ class MainMenuViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.navigationController?.navigationBar.isHidden=true;
-    }
     /*
     // MARK: - Navigation
 

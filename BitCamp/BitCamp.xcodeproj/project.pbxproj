@@ -24,6 +24,12 @@
 		CBF782512079C47200539A4E /* Welcome2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF782502079C47200539A4E /* Welcome2ViewController.swift */; };
 		CBF782532079C5F200539A4E /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF782522079C5F200539A4E /* Networking.swift */; };
 		CBF782552079C7C800539A4E /* Welcome3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF782542079C7C800539A4E /* Welcome3ViewController.swift */; };
+		CBF7825B2079DBFA00539A4E /* Parked1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF7825A2079DBFA00539A4E /* Parked1ViewController.swift */; };
+		CBF7825D2079DD7F00539A4E /* Parked2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF7825C2079DD7F00539A4E /* Parked2ViewController.swift */; };
+		CBF7825F2079E36F00539A4E /* BathroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF7825E2079E36F00539A4E /* BathroomViewController.swift */; };
+		CBF782612079E3F500539A4E /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF782602079E3F500539A4E /* FoodViewController.swift */; };
+		CBF782642079E45000539A4E /* SeatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF782632079E45000539A4E /* SeatsViewController.swift */; };
+		CBF782662079E4A600539A4E /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF782652079E4A600539A4E /* TicketsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +53,12 @@
 		CBF782502079C47200539A4E /* Welcome2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome2ViewController.swift; sourceTree = "<group>"; };
 		CBF782522079C5F200539A4E /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		CBF782542079C7C800539A4E /* Welcome3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome3ViewController.swift; sourceTree = "<group>"; };
+		CBF7825A2079DBFA00539A4E /* Parked1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parked1ViewController.swift; sourceTree = "<group>"; };
+		CBF7825C2079DD7F00539A4E /* Parked2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parked2ViewController.swift; sourceTree = "<group>"; };
+		CBF7825E2079E36F00539A4E /* BathroomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BathroomViewController.swift; sourceTree = "<group>"; };
+		CBF782602079E3F500539A4E /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		CBF782632079E45000539A4E /* SeatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatsViewController.swift; sourceTree = "<group>"; };
+		CBF782652079E4A600539A4E /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
 		D70453AEADBD2A8651C43B5A /* Pods_BitCamp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitCamp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,6 +89,8 @@
 				98AFFD3D20794F53009041AE /* Eddystone.swift */,
 				98AFFD4020794F8A009041AE /* BeaconScanner.swift */,
 				98AFFD4220794FA4009041AE /* DispatchTimer.swift */,
+				CBF7825A2079DBFA00539A4E /* Parked1ViewController.swift */,
+				CBF7825C2079DD7F00539A4E /* Parked2ViewController.swift */,
 			);
 			path = "Beacon Detection";
 			sourceTree = "<group>";
@@ -115,8 +129,12 @@
 				A802AB5E207863D5003A8987 /* Info.plist */,
 				CBF7824E2079BF9F00539A4E /* WelcomeViewController.swift */,
 				CBF782502079C47200539A4E /* Welcome2ViewController.swift */,
-				CBF782522079C5F200539A4E /* Networking.swift */,
 				CBF782542079C7C800539A4E /* Welcome3ViewController.swift */,
+				CBF782522079C5F200539A4E /* Networking.swift */,
+				CBF7825E2079E36F00539A4E /* BathroomViewController.swift */,
+				CBF782602079E3F500539A4E /* FoodViewController.swift */,
+				CBF782632079E45000539A4E /* SeatsViewController.swift */,
+				CBF782652079E4A600539A4E /* TicketsViewController.swift */,
 			);
 			path = BitCamp;
 			sourceTree = "<group>";
@@ -256,9 +274,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBF782662079E4A600539A4E /* TicketsViewController.swift in Sources */,
 				CBD4D9542079179F00AC753E /* MainMenuViewController.swift in Sources */,
+				CBF7825B2079DBFA00539A4E /* Parked1ViewController.swift in Sources */,
+				CBF782612079E3F500539A4E /* FoodViewController.swift in Sources */,
+				CBF7825F2079E36F00539A4E /* BathroomViewController.swift in Sources */,
 				CBF7824F2079BF9F00539A4E /* WelcomeViewController.swift in Sources */,
 				98AFFD4120794F8A009041AE /* BeaconScanner.swift in Sources */,
+				CBF7825D2079DD7F00539A4E /* Parked2ViewController.swift in Sources */,
+				CBF782642079E45000539A4E /* SeatsViewController.swift in Sources */,
 				CBF782532079C5F200539A4E /* Networking.swift in Sources */,
 				CBD4D95020790FDC00AC753E /* NewCarViewController.swift in Sources */,
 				A802AB55207863D5003A8987 /* ViewController.swift in Sources */,

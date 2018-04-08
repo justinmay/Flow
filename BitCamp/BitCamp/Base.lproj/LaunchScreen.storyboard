@@ -22,10 +22,17 @@
                                 <rect key="frame" x="55" y="194" width="265" height="278"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aaaaaaa" translatesAutoresizingMaskIntoConstraints="NO" id="e0A-7k-vIF">
+                                <rect key="frame" x="58" y="262" width="259" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="circle" destination="e0A-7k-vIF" id="9CG-mW-Lq3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -33,6 +40,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="aaaaaaa" width="650" height="650"/>
         <image name="flowIcon" width="280" height="280"/>
     </resources>
 </document>
