@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if userInputName == user && passwordInput == pass {
             self.performSegue(withIdentifier: "mainMenuSegue", sender: self)
         } else {
-            self.performSegue(withIdentifier: "segue", sender: self)
+            self.performSegue(withIdentifier: "welcomeSegue", sender: self)
         }
     }
     
