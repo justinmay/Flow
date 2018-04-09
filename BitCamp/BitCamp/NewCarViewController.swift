@@ -12,9 +12,26 @@ class NewCarViewController: UIViewController, UITextFieldDelegate, BeaconScanner
     
     @IBOutlet weak var parkedButton: UIButton!
     @IBAction func parkedButton(_ sender: UIButton) {
-        self.parkedButton.backgroundColor = UIColor(red:0.94, green:0.28, blue:0.44, alpha:1.0)
-        self.parkedButton.setTitle("Leave", for: .normal)
-        self.beaconScanner.stopScanning()
+        if(self.parkedButton.title(for: .normal) != "Leave")  {
+        
+            self.parkedButton.backgroundColor = UIColor(red:0.94, green:0.28, blue:0.44, alpha:1.0)
+            self.parkedButton.setTitle("Leave", for: .normal)
+            self.beaconScanner.stopScanning()
+        } else {
+            Networking.leave(carId: self.newCarId, completionHandler: { (error) in
+                
+                if (error != nil){
+                    print(error ?? "error")
+                } else {
+                    print("successfuly left")
+                }
+                
+                })
+            self.parkedButton.backgroundColor = UIColor.gray
+            self.newCarTextField.text = ""
+            self.parkedButton.setTitle("Enter a CarID ", for: .normal)
+        }
+        
     }
     @IBAction func newCarButton(_ sender: Any) {
         print("NEW CAR BUTTON TAPPED")
@@ -131,7 +148,7 @@ class NewCarViewController: UIViewController, UITextFieldDelegate, BeaconScanner
         }
         
         
-        if distance < 0.05 {
+        if distance < 0.1 {
             
             
             if (beaconsSearched.contains(beaconString)){
@@ -143,6 +160,7 @@ class NewCarViewController: UIViewController, UITextFieldDelegate, BeaconScanner
                 
                 //dictionary for beacon
                 
+                print(beaconActualString! + " passed")
                 self.beaconNameLabel.text = beaconActualString! + " passed"
                 self.beaconsSearched.append(beaconString)
                 //beaconScanner.stopScanning()
@@ -173,7 +191,23 @@ class NewCarViewController: UIViewController, UITextFieldDelegate, BeaconScanner
                             if (error != nil){
                                 print(error ?? "error")
                             } else {
-                                print("Successfully sent")
+                                print("Successfully passed second beacon")
+                            }
+                        })
+                    }
+                } else if(beaconString == "http://www.vineeth.com"){
+                    //PASSES THIRD BEACON (BEACON 2), SENDS POST TO SERVER AND CHANGES BIG SCREEN
+                    
+                    print("third beacon reached YYYYY")
+                    
+                    if parkingLotString != nil {
+                        
+                        
+                        Networking.passThirdBeacon(parkingSpot: self.parkingLotString, completionHandler: { error in
+                            if (error != nil){
+                                print(error ?? "error")
+                            } else {
+                                print("Successfully passed third beacon")
                             }
                         })
                     }
@@ -195,15 +229,14 @@ class NewCarViewController: UIViewController, UITextFieldDelegate, BeaconScanner
     }
     
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+        beaconScanner.stopScanning()
      }
-     */
+    
     
 }
 
